@@ -1,5 +1,5 @@
 import { Prop } from '../../../accessories/Types';
-declare type Return = {
+type Return = {
     newval: any;
     changed: boolean;
 };
