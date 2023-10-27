@@ -133,7 +133,7 @@ const methodDelete = (object, userpath) => {
     object,
     userpath,
     lastpath: (obj, prop) => {
-      delete obj[prop];
+      if (isArray(obj)) obj.splice(prop, 1);else delete obj[prop];
       return undefined;
     },
     otherpath: (_obj, _prop, value) => {
@@ -187,16 +187,14 @@ const methodPush = function (object, userpath) {
 };
 const methodRemove = function (object, userpath) {
   const newobj = methodGet(object, userpath);
-  if (!isObject(newobj)) {
+  if (!isArrObject(newobj)) {
     if (isdev) devconsole.mods.objs(userpath, 'remove');
     return {};
   }
   for (var _len3 = arguments.length, props = new Array(_len3 > 2 ? _len3 - 2 : 0), _key3 = 2; _key3 < _len3; _key3++) {
     props[_key3 - 2] = arguments[_key3];
   }
-  props.forEach(prop => {
-    methodDelete(newobj, prop);
-  });
+  props.forEach(prop => methodDelete(newobj, prop));
   return newobj;
 };
 const methodSetnew = (object, userpath, newval) => {
