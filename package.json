@@ -1,11 +1,11 @@
 {
   "name": "tn-deepobj",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": " ",
   "keywords": [],
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/src/index.d.ts",
   "scripts": {
     "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",
     "Build": "rimraf dist && rollup -c",
@@ -18,24 +18,24 @@
   "author": "Turnova",
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "^7.20.13",
+    "@babel/runtime": "^7.23.2",
     "tn-consoler": "^2.2.0",
     "tn-mergeobj": "^2.0.0",
     "tn-validate": "^4.0.0"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/plugin-transform-runtime": "^7.19.6",
-    "@babel/preset-env": "^7.20.2",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-replace": "^5.0.2",
-    "@types/node": "^18.11.19",
-    "rollup": "^3.14.0",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-replace": "^5.0.4",
+    "@types/node": "^20.8.9",
+    "rollup": "^4.1.4",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "tn-typescript": "^1.2.3",
-    "typescript": "^4.9.5"
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tn-typescript": "^2.1.1",
+    "typescript": "^5.2.2"
   }
 }
